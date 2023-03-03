@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link ref="stylesheet" href="#">
+        <meta name="viewport" content="width=device-width, initial-scale=1.1">
+       <style>
+            :root{
+                --background-main:#185f50f6;
+                --background-header: #0a231e;
+                --font-family:"Times New Roman","serif";
+                --font-size:1.4rem;
+            }
+            *{
+                padding:0px;
+                margin:0px;
+                box-sizing:border-box;
+            }
+            body{
+                width:100%;
+                height:100vh;
+                font-family:var(--font-family);
+            }
+            .grid{
+                display:grid;
+                grid-template-columns:1fr minmax(60%,65%) 1fr;
+                grid-template-rows:1fr minmax(80%,85%) 0.5fr;
+                width:100%;
+                height:100vh;
+            }
+            .q{
+                border:1px solid black;
+            }
+            .caja1{
+                grid-column-start:1;
+                grid-column-end:4;
+            }
+            .caja5{
+                grid-column-start:1;
+                grid-column-end:4;
+            }
+            
+            /*estilos*/
+            h1{
+                font-size:4rem;
+            }
+            h3{
+                font-size:3.5rem;
+            }
+            .caja1{
+                padding:10px;
+                padding-left:20px;
+                background-color:var(--background-header);
+                color:white;
+            }
+            .caja2{
+                padding:10px;
+                margin-left:10px;
+            }
+            .caja2 ul{
+                list-style-type:none;
+            }
+            .caja2 li{
+                margin-bottom:10px;
+                padding:10px;
+                font-size:var(--font-size);
+                box-shadow:2px 4px 6px rgba(0,0,0,0.3), 2px 4px 6px rgba(0,0,0,0.5);
+                background-color:var(--background-main);
+                color:white;
+                font-weight:bold;
+                text-transform:capitalize;
+            }
+            .caja3{
+                padding:10px;
+                padding-left:20px;
+                text-align:justify;
+                font-size: var(--font-size);
+            }
+            .caja4{
+                font-size:var(--font-size);
+                margin-right:10px;
+                margin:5px;
+                padding:40px 10px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap:wrap;
+                text-align:center;
+                background-color: var(--background-main);
+                color:white;
+            }
+            .caja5{
+                font-size:1.2rem;
+                font-style:oblique;
+                color:white;
+                background-color:var(--background-header);
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            /*querys*/
+            @media screen and (max-width:1300px){
+                :root{
+                    --font-size:1.2rem;
+                }
+                .grid{
+                    grid-template-rows:0.5fr minmax(30%,45%) minmax(30%,40%) 0.2fr;
+                }
+                h1{
+                    font-size:2.5rem;
+                }
+                h3{
+                font-size:2rem;
+                }
+                .caja3{
+                    grid-column-start:2;
+                    grid-column-end:4;
+                }
+                .caja4{
+                    grid-row-start:3;
+                    grid-column-start:1;
+                    grid-column-end:4;
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                    flex-direction:column;
+                    flex-wrap:nowrap;
+                    font-size:1.2rem;
+                    margin:0;
+                }
+            }
+            @media screen and (max-width:900px){
+                .grid{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction:column;
+                    height:auto;
+
+                }
+                .q {
+                    width:100%;
+                    text-align:center;
+                }
+
+            }
+            @media screen and (min-width:2100px){
+                body{
+                    display:flex;
+                    justify-content: center;
+                    align-items:center;
+                }
+                .grid{
+                    max-width:2100px;
+                    height:900px;
+
+                }
+            }
+
+       </style>
+    </head>
+
+    <body>
+
+      <div class="grid">
+        <div class="caja1 q">
+            <h1>Tokio</h1>
+        </div>
+        <div class="caja2 q">
+            <ul>
+                <li>The city</li>
+                <li>The food</li>
+                <li>The fly</li>
+                <li>The clime</li>
+            </ul>
+        </div>
+        <div class="caja3 q">
+            <h3>The city</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat impedit atque quod blanditiis dignissimos, illum eius soluta molestiae consequatur voluptate, necessitatibus nesciunt nam officia deserunt tempora? Consequatur iste ipsam laborum.</p>
+        </div>
+        <div class="caja4 q">
+            <h3>where?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, quis.</p>
+            <h3>who?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, atque. Quis.</p>
+            <h3>what?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab veritatis incidunt voluptates modi?</p>
+        </div>
+        <div class="caja5 q">
+            <p>Derechos Reservados &copy;2010-2020 www.index.com</p>
+        </div>
+      </div>
+
+    </body>
+</html>
